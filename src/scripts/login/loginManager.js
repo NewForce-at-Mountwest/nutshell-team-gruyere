@@ -1,0 +1,1 @@
+//This module handles the login and registration functionality of the app
