@@ -7,7 +7,7 @@ const formBuilder = {
         <h3>Log In</h3>
         <form action="">
           <input type="text" id="login-email-input" placeholder="Email" />
-          <input type="text" id="login-password-input" placeholder="Password" />
+          <input type="text" id="login-password-input" placeholder="Password"/>
           <button id ="login-button">Log In</button>
         </form>
       </div>`;
