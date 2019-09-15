@@ -1,3 +1,5 @@
+import makeTaskEntryComponent from "./singleFormEntry.js";
+
 const tasksDomPrinter = {
     // method that puts an array of task objects and prints to dom
     printTasksToDom: arrayOfTasks => {
@@ -10,4 +12,6 @@ const tasksDomPrinter = {
         })
     }
 
-}
+},
+
+export default tasksDomPrinter;
