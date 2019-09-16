@@ -1,3 +1,5 @@
+import jwapiManager from "./eventsapimanager.js"
+import jweventsdomprinter from "./eventsapimanager.js"
 
 const addeventbuttonclick =  document.querySelector("body")
 
@@ -7,19 +9,17 @@ const addeventlist=
 addeventbuttonclick.addEventListener("click",function(){
 
     if (event.target.id.includes("event-button")){
-        document.querySelector("#event-section").innerHTML=
-         `
+        document.querySelector("#buttonsection").innerHTML=`
          <h2>ADD EVENT</h2>
          <form>
-NAME OF EVENT: <input type="text"  value=" ">
+NAME OF EVENT: <input type="text" id= "nameofevent"  value=" ">
 <br><br>
-DATE OF EVENT: <input type="text" value=" ">
+LOCATION: <input type="text" id="locationofevent" value=" ">
 <br></br>
-LOCATION     : <input type="text" value=" ">
+DATE OF EVENT : <input type="text" id="dateofevent" value=" ">
 <br></br>
 </form>
-<button id=jwsubmitbutton>SUBMIT</button
-        `
+<button id=jwsubmitbutton>SUBMIT</button `
 }
 })
 
