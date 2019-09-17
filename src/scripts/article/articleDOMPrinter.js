@@ -40,14 +40,16 @@ const articlePrinter = {
           });
       },
       printArticleEditForm: (articleObjectToEdit) => {
-          const targetCard = document.querySelector(`#article-card-${articleObjectToEdit.id}`
+          const articleTargetCard = document.querySelector(`#article-card-${articleObjectToEdit.id}`)
 
-          targetCard.innerHTML = `
+          articleTargetCard.innerHTML = `
           <section>
-          <input id="edit-input-${articleObjectToEdit.id}" type="text" value="${articleObjectToEdit.title}"
-          <input id="edit-input-${articleObjectToEdit.id}" type="text" value="${articleObjectToEdit.synopsis}"
-          <input id="edit-input-${articleObjectToEdit.id}" type="text" value="${articleObjectToEdit.url}"
-
+          <input type="text" id="edit-input-${articleObjectToEdit.id}" type="text" value="${articleObjectToEdit.title}"
+          <br>
+          <input type="text" id="edit-input-${articleObjectToEdit.id}" type="text" value="${articleObjectToEdit.synopsis}"
+          <br>
+          <input type="text" id="edit-input-${articleObjectToEdit.id}" type="text" value="${articleObjectToEdit.url}"
+          <br>
             <button id="save-edit-${articleObjectToEdit.id}">Save</button>
           </section>
           `

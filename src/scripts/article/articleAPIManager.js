@@ -2,10 +2,17 @@
 const articleAPIManager = {
 
     getAllArticles: () => {
-    return fetch ("http://localhost:8088/news")
-    .then(response => response.json()
-    );
+        return fetch ("http://localhost:8088/news")
+        .then(response => response.json()
+        );
     },
+
+    getOneArticle: articleId => {
+        return fetch(`http://localhost:8088/news/${articleId}`)
+        .then(response => response.json()
+        );
+    },
+
 //      Method to post one Article
     postArticle: singleArticleObject => {
         return fetch("http://localhost:8088/news", {

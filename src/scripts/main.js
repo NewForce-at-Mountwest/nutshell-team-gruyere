@@ -1,6 +1,16 @@
 import articleDOMPrinter from "./article/articleDOMPrinter.js";
 import articlePrinter from "./article/articleDOMPrinter.js";
 import articleAPIManager from "./article/articleAPIManager.js";
+import loginManager from "./login/loginManager.js";
+// import formPrinter from "../scripts/login/printToDom.js";
+
+
+
+// // formPrinter.printLoginForm();
+// // formPrinter.printRegisterForm();
+loginManager.loggingIN();
+loginManager.register();
+loginManager.logOut();
 
 articleDOMPrinter.printNewArticleButtonToDOM()
 
@@ -17,10 +27,10 @@ articleDOMPrinter.printNewArticleButtonToDOM()
     }
   });
 
-    document.querySelector("#article-section").addEventListener("click", function() {
+    document.querySelector("#news-header").addEventListener("click", function() {
         if (event.target.id === "save-new-article-btn") {
 
-            // console.log("Btn Success!")
+            console.log("Btn Success!")
 
 
             const userInputTitle = document.querySelector("#new-article-title-box").value;
@@ -84,3 +94,5 @@ document.querySelector("#news-cont").addEventListener("click", () => {
   });
 
     });
+
+

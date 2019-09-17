@@ -1,4 +1,60 @@
 {
+  "users": [
+    {
+      "username": "nutshellman",
+      "email": "nutshellman@nutshell.com",
+      "password": "supersecret",
+      "id": 1
+    },
+    {
+      "username": "nutshellwoman",
+      "email": "nutshellwoman@nutshell.com",
+      "password": "topsecret",
+      "id": 2
+    },
+    {
+      "username": "nicole",
+      "password": "evans",
+      "email": "kelli",
+      "id": 3
+    },
+    {
+      "username": "test",
+      "password": "test",
+      "email": "test",
+      "id": 4
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "taskname": "look at news",
+      "date": "9/12/19",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "taskname": "lets chat",
+      "date": "9/13/19",
+      "userId": 2
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "name": "wild party night",
+      "date": "9/14/19",
+      "location": "wild wonderful west virginia",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "name": "wild party days",
+      "date": "9/15/19",
+      "location": "Huntington party central",
+      "userId": 2
+    }
+  ],
   "news": [
     {
       "title": "This device harnesses the cold night sky to generate electricity in the dark",
@@ -22,25 +78,32 @@
       "id": 3
     },
     {
-      "title": "test",
-      "synopsis": "test",
-      "url": "test",
+      "title": "news",
+      "synopsis": "news",
+      "url": "news",
       "userId": 1,
       "id": 4
     },
     {
-      "title": "test",
-      "synopsis": "test",
-      "url": "test",
+      "title": "news",
+      "synopsis": "news",
+      "url": "news",
       "userId": 1,
       "id": 5
+    },
+    {
+      "title": "newstest",
+      "synopsis": "newstest",
+      "url": "newstest",
+      "userId": 1,
+      "id": 6
     },
     {
       "title": "test",
       "synopsis": "test",
       "url": "test",
       "userId": 1,
-      "id": 6
+      "id": 7
     }
   ]
 }
