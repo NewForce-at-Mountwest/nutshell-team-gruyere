@@ -1,66 +1,68 @@
 {
-    "user": [
-      {
-        "username": "nutshellman",
-        "email": "nutshellman@nutshell.com",
-        "password": "supersecret",
-        "id": 1
-      },
-      {
-          "username": "nutshellwoman",
-          "email": "nutshellwoman@nutshell.com",
-        "password": "topsecret",
-          "id": 2
-      }
-    ],
-
-"tasks":[
+  "users": [
     {
-        "id": 1,
-"taskname": "look at news",
-"date": "9/12/19",
-"userId": 1
+      "username": "nutshellman",
+      "email": "nutshellman@nutshell.com",
+      "password": "supersecret",
+      "id": 1
     },
     {
-        "id": 2,
-"taskname": "lets chat",
-"date": "9/13/19",
-"userId":  2
-    }
-
-],
-
-"events":[
-    {
-"id": 1,
-"name": "wild party night",
-"date": "9/14/19",
-"location": "wild wonderful west virginia",
-"userId": 1
+      "username": "nutshellwoman",
+      "email": "nutshellwoman@nutshell.com",
+      "password": "topsecret",
+      "id": 2
     },
     {
-        "id": 2,
-        "name": "wild party days",
-        "date": "9/15/19",
-        "location": "Huntington party central",
-        "userId": 2
-            }
-],
-
-"news":[
+      "username": "nicole",
+      "password": "evans",
+      "email": "kelli",
+      "id": 3
+    }
+  ],
+  "tasks": [
     {
-        "id": 1,
-        "title": "Batboy falls in love",
-        "synopsis": "batboy meets batgirl produces bat babies buys batcave",
-        "url":  "www.batboychronicles.com",
-        "userId": 1
+      "id": 1,
+      "taskname": "look at news",
+      "date": "9/12/19",
+      "userId": 1
     },
     {
-        "id": 2,
-        "title": "Pee Wee goes to the movies",
-        "synopsis": "Come join pee wee at his favorite movie. fun will be had for all",
-        "url":  "www.peeweepleasure.com",
-        "userId": 2
+      "id": 2,
+      "taskname": "lets chat",
+      "date": "9/13/19",
+      "userId": 2
     }
-]
+  ],
+  "events": [
+    {
+      "id": 1,
+      "name": "wild party night",
+      "date": "9/14/19",
+      "location": "wild wonderful west virginia",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "name": "wild party days",
+      "date": "9/15/19",
+      "location": "Huntington party central",
+      "userId": 2
     }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "Batboy falls in love",
+      "synopsis": "batboy meets batgirl produces bat babies buys batcave",
+      "url": "www.batboychronicles.com",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "title": "Pee Wee goes to the movies",
+      "synopsis": "Come join pee wee at his favorite movie. fun will be had for all",
+      "url": "www.peeweepleasure.com",
+      "userId": 2
+    }
+  ]
+}
