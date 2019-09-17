@@ -1,12 +1,13 @@
 const jwapiManager = {
+
     getallevents: () => {
       return fetch("http://localhost:8088/events").then(response =>
         response.json()
       );
     },
 
-    getoneevent: eventId => {
-      return fetch(`http://localhost:8088/events/${Id}`).then(response =>
+    getoneevent: id => {
+      return fetch(`http://localhost:8088/events/${id}`).then(response =>
         response.json()
       );
     },

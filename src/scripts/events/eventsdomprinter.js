@@ -1,5 +1,4 @@
 import addeventlist from "./eventeventclicker.js"
-
 import jwapiManager from "./eventsapimanager.js"
 
 
@@ -17,9 +16,11 @@ const jweventsdomprinter = {
                 // When they come back from the API, print them
             parsedevents.forEach(singleEvent => {
             document.querySelector("#apisection").innerHTML +=
-         `<p>${singleEvent.name}</p>
-        <p>${singleEvent.location}</p>
-        <p>${singleEvent.date}</p>`
+         `<h3>${singleEvent.name}</h3>
+        <p>LOCATION:${singleEvent.location}</p>
+        <p>DATE:${singleEvent.date}</p>
+        <button id="edit-button">EDIT</button>
+        `
                 })
             });
     }
