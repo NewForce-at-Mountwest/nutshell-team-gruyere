@@ -28,15 +28,18 @@ const jweventsdomprinter = {
 
     printEventEditForm: (eventToEdit) => {
 
-        const targetEventCard = document.querySelector(`#student-card-${EventToEdit.id}`)
+        const targetEventCard = document.querySelector(`#edit-button-${eventToEdit.id}`)
 
         targetEventCard.innerHTML = `<section>
-          <input id="edit-input-${eventToEdit.id}" type="text" value="${eventToEdit.name}">
-          <input id="edit-input-${eventToEdit.id}" type="text" value="${eventToEdit.location}">
-          <input id="edit-input-${eventToEdit.id}" type="text" value="${eventToEdit.date}">
+          <input id="edit-name-${eventToEdit.id}" type="text" value="${eventToEdit.name}">
+          <br>
+          <input id="edit-location-${eventToEdit.id}" type="text" value="${eventToEdit.location}">
+          <br>
+          <input id="edit-date-${eventToEdit.id}" type="text" value="${eventToEdit.date}">
+          <br>
           <button id="save-edit-${eventToEdit.id}">Save</button>
         </section>`
-console.log(targetEventCard)
+// console.log(targetEventCard)
     }
 }
 
