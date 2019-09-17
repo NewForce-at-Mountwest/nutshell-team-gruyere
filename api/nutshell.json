@@ -1,5 +1,5 @@
 {
-  "user": [
+  "users": [
     {
       "username": "nutshellman",
       "email": "nutshellman@nutshell.com",
@@ -11,6 +11,12 @@
       "email": "nutshellwoman@nutshell.com",
       "password": "topsecret",
       "id": 2
+    },
+    {
+      "username": "nicole",
+      "password": "evans",
+      "email": "kelli",
+      "id": 3
     }
   ],
   "tasks": [
@@ -36,10 +42,11 @@
       "userId": 1
     },
     {
-      "name": " justin warden party hour",
-      "location": "clendenin wv ",
-      "date": "9/5/3000",
-      "id": 2
+      "id": 2,
+      "name": "wild party days",
+      "date": "9/15/19",
+      "location": "Huntington party central",
+      "userId": 2
     }
   ],
   "news": [
