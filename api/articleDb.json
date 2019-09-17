@@ -1,4 +1,5 @@
 {
+  
   "news": [
     {
       "title": "This device harnesses the cold night sky to generate electricity in the dark",
@@ -34,13 +35,6 @@
       "url": "test",
       "userId": 1,
       "id": 5
-    },
-    {
-      "title": "test",
-      "synopsis": "test",
-      "url": "test",
-      "userId": 1,
-      "id": 6
     }
   ]
 }
