@@ -45,9 +45,11 @@ document.querySelector("#jwsubmitbutton")
 document.querySelector("body").addEventListener("click", () => {
     if (event.target.id.includes("edit-button")) {
         console.log("you clicked edit")
+        console.log(event.target.id.split("-")[2])
       jwapiManager
         .getoneevent(event.target.id.split("-")[2])
         .then(singleEvent => {
+          console.log(singleEvent)
           jweventsdomprinter.buildeventcomponent(singleEvent);
         });
     }
