@@ -4,7 +4,7 @@ import articleAPIManager from "./articleAPIManager.js";
 
 // ___ ~~~ NEWS ARTICLE COMPONENT ~~~ ___ //
 // Created by: Melody Miller
-// articleDOMPrinter.printNewArticleButtonToDOM()
+
 const articleClickEvents = {
 
     // input for task section
@@ -102,7 +102,7 @@ const articleClickEvents = {
         },
 
         // input for task section
-        articleSaveEditButton:() => { // ARTICLE ------ SAVE EDIT BUTTON ------ //
+    articleSaveEditButton:() => { // ARTICLE ------ SAVE EDIT BUTTON ------ //
 
          document.querySelector("body").addEventListener("click", () => {
                 if (event.target.id.includes("save-edit")) {
