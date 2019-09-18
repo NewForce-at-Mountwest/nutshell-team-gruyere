@@ -35,6 +35,18 @@
       "password": "test",
       "email": "test",
       "id": 6
+    },
+    {
+      "username": "hi",
+      "password": "hi",
+      "email": "hi",
+      "id": 7
+    },
+    {
+      "username": "bye",
+      "password": "bye",
+      "email": "bye",
+      "id": 8
     }
   ],
   "tasks": [
