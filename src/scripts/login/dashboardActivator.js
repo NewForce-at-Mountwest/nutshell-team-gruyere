@@ -7,12 +7,16 @@ import taskClickEvents from "../taskClickEvents.js";
 
 const dashboardActivator = () => {
   // articles
-  // events
+
+  //tasks
   taskClickEvents.taskInput();
   taskClickEvents.taskEdit();
   taskClickEvents.taskDelete();
   taskClickEvents.taskSave();
   taskClickEvents.taskEditSave();
+  // events
+
+  //logout form
   formPrinter.printLogoutForm();
 };
 
