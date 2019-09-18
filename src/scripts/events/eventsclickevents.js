@@ -1,4 +1,7 @@
-const clickEvents= {
+import jwapiManager from "./eventsapimanager.js"
+import jweventsdomprinter from "./eventsdomprinter.js"
+
+const jwClickEvents= {
 newEventPost: ()=> {
 
     document.querySelector("#jwsubmitbutton")
@@ -75,3 +78,5 @@ submitEvent: ()=> {
       });
     }
 }
+
+export default jwClickEvents

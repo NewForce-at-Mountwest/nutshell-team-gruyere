@@ -1,5 +1,6 @@
 import addeventlist from "./eventeventclicker.js"
 import jwapiManager from "./eventsapimanager.js"
+import jwClickEvents from "./eventsclickevents.js"
 
 
 const jweventsdomprinter = {
@@ -42,5 +43,8 @@ const jweventsdomprinter = {
 // console.log(targetEventCard)
     }
 }
+              jwClickEvents.editEvent()
+              jwClickEvents.submitEvent()
+            //   jwClickEvents.newEventPost()
 
 export default jweventsdomprinter;

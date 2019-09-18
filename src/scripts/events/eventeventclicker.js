@@ -1,5 +1,6 @@
 import jwapiManager from "./eventsapimanager.js"
 import jweventsdomprinter from "./eventsdomprinter.js"
+import jwClickEvents from "./eventsclickevents.js"
 
 const addeventbuttonclick = document.querySelector("body")
 
@@ -37,11 +38,14 @@ DATE OF EVENT : <input type="text" id="dateofevent" value=" ">
             .then(parsedEventArray => {
               // Get all the journal entries from json-server and reprint them to refresh the page
               jweventsdomprinter.buildeventcomponent(parsedEventArray);
+
             });
         });
   }
 })
 
+              // jwClickEvents.editEvent()
+              // jwClickEvents.submitEvent()
 
 
     // Event listener for edit button

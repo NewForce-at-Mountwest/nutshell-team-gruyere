@@ -42,11 +42,16 @@
       "userId": 1
     },
     {
-      "id": 2,
-      "name": "wild party days",
+      "name": "party",
+      "location": "party",
       "date": "9/15/19",
-      "location": "Huntington party central",
-      "userId": 2
+      "id": 2
+    },
+    {
+      "name": "pig",
+      "location": "party",
+      "date": "time",
+      "id": 3
     }
   ],
   "news": [
