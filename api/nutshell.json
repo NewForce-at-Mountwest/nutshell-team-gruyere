@@ -1,5 +1,5 @@
 {
-  "user": [
+  "users": [
     {
       "username": "nutshellman",
       "email": "nutshellman@nutshell.com",
@@ -22,18 +22,28 @@
   ],
   "events": [
     {
-      "id": 1,
-      "name": "wild party night",
-      "date": "9/14/19",
-      "location": "wild wonderful west virginia",
-      "userId": 1
+      "name": "MONSTERMASH",
+      "location": "graveyardsmash",
+      "date": "7/7/99",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "wild party days",
+      "name": "mickeymousefuntime!!",
+      "location": "party",
       "date": "9/15/19",
-      "location": "Huntington party central",
-      "userId": 2
+      "id": 2
+    },
+    {
+      "name": " piglypartyhour",
+      "location": " right here",
+      "date": "9/9/99",
+      "id": 4
+    },
+    {
+      "name": " LETS PARTY DUDE",
+      "location": " WILDMAN PARTY CENTRAL",
+      "date": " 9/20/19",
+      "id": 5
     }
   ],
   "news": [
