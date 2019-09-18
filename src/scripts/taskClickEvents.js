@@ -13,7 +13,7 @@ tasksApiManager.getAllTasks()
     taskSave: () => {
 // save button for new task entry
 const saveTaskEntryButton = document.querySelector("body");
-    // console.log(saveTaskEntryButton, "you clicked the button!!")
+
     saveTaskEntryButton.addEventListener("click", function () {
         // once the button is clicked do these things:
         if (event.target.id === "save-new") {
@@ -47,7 +47,6 @@ document.querySelector("body").addEventListener("click", () => {
     })
 },
 
-
     // Task edit save button
     taskEditSave: () => {
 document.querySelector("body").addEventListener("click", () => {
@@ -74,7 +73,7 @@ taskDelete: () => {
             console.log(idOfThingToDelete);
             // Make a DELETE request to our json-server
             tasksApiManager.deleteOneTask(idOfThingToDelete).then(() => {
-                debugger
+
                 // Once the delete is completed, get all the tasks--
                 tasksApiManager.getAllTasks()
             });

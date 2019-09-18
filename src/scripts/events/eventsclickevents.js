@@ -28,12 +28,10 @@ newEventPost: ()=> {
 editEvent: ()=>{
 document.querySelector("body").addEventListener("click", () => {
     if (event.target.id.includes(`edit-button-${event.target.id.split("-")[2]}`)) {
-      console.log("you clicked edit")
-      console.log(event.target.id.split("-")[2])
       jwapiManager
         .getoneevent(event.target.id.split("-")[2])
         .then(singleEvent => {
-          console.log(singleEvent)
+
           jweventsdomprinter.printEventEditForm(singleEvent);
         });
     }
@@ -46,13 +44,11 @@ submitEvent: ()=> {
         if (event.target.id.includes("save-edit-")) {
 
           const idFromDatabase = event.target.id.split("-")[2];
-          console.log("this should be the id from the db", idFromDatabase)
 
-          console.log("You clicked the save edit button!");
           // Get values of form inputs
           const nameValue = document.querySelector(`#edit-name-${idFromDatabase}`)
             .value;
-          console.log(nameValue)
+
           const locationValue = document.querySelector(
             `#edit-location-${idFromDatabase}`
           ).value;
@@ -66,7 +62,6 @@ submitEvent: ()=> {
             date: dateValue
           }
 
-          // console.log(editedEventValues)
           // Make a PUT request to db
  // Refresh the page --> GET all and then reprint all
           jwapiManager.editeventEntry(idFromDatabase, editedEventValues)

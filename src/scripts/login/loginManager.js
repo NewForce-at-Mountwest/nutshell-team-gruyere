@@ -14,14 +14,13 @@ const loginManager = {
       const emailValue = document.querySelector("#login-email-input").value;
       const passwordValue = document.querySelector("#login-password-input")
         .value;
-      // console.log(emailValue, passwordValue)
+
       // Use the email to go to the database and get that user's information
-      APIManager.getSingleUser("email" , emailValue).then(user => {
+      APIManager.getSingleUser("email" , emailValue).then((user) => {
         if (user.length === 1) {
           // User is going to be an array no matter what, so we'll have to delve into the array to get the user's data
-          console.log("This is the user", user);
+
           // Compare the user's password from the database to the information they entered
-          console.log(user[0].password, passwordValue);
           if (user[0].password === passwordValue) {
             // If the passwords match, store the id in local storage
             localStorage.setItem("userId", user[0].id);
@@ -50,23 +49,18 @@ const loginManager = {
       const username = document.querySelector("#register-username-input").value;
       const email = document.querySelector("#register-email-input").value;
       const password = document.querySelector("#register-password-input").value;
-console.log(username, email, password)
-// debugger
-    //   console.log("this is the username", username);
-      // let isUnique = false;
 
         //check to see is the email address already exists in the database
       APIManager.getSingleUser("email", email)
-        .then(user => {
-            // debugger
+        .then((user) => {
+
           if (user.length === 0) {
-            // isUnique = true;
+
 
             APIManager.getSingleUser("username", username)
-            .then(user => {
+            .then((user) => {
               //check to see if the username already exists in the database
               if (user.length === 0) {
-                // isUnique = true;
 
                 const userObject = buildUserObject(username, password, email);
 
@@ -76,16 +70,16 @@ console.log(username, email, password)
                     console.log("this is userObject", userObject);
                     formPrinter.removeRegisterForm();
                     dashboardActivator();
-                    // formPrinter.printLogoutForm();
+
                   });
                 });
               } else {
-                // isUnique = false;
+
                 window.alert("That username already exists!");
               }
             });
           } else {
-            // isUnique = false;
+
             window.alert("That email already exists!");
           }
         });
@@ -94,11 +88,3 @@ console.log(username, email, password)
 };
 
 export default loginManager;
-
-
-// **********************FIX THIS FUCKING LOG OUT FORM*****************************
-// document.querySelector("logout-button").addEventListener("click" , () => {
-//     dashboardDeactivator();
-//     formPrinter.printLoginForm();
-//     formPrinter.printRegisterForm();
-// })

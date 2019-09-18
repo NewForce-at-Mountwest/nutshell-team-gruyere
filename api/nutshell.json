@@ -11,6 +11,18 @@
       "email": "nutshellwoman@nutshell.com",
       "password": "topsecret",
       "id": 2
+    },
+    {
+      "username": "nicole",
+      "password": "evans",
+      "email": "kelli",
+      "id": 3
+    },
+    {
+      "username": "123",
+      "password": "123",
+      "email": "123",
+      "id": 4
     }
   ],
   "tasks": [
@@ -44,6 +56,12 @@
       "location": " WILDMAN PARTY CENTRAL",
       "date": " 9/20/19",
       "id": 5
+    },
+    {
+      "name": " final test!!!",
+      "location": "  final test!!!",
+      "date": "  final test!!!",
+      "id": 6
     }
   ],
   "news": [
@@ -92,6 +110,22 @@
       "url": "test2",
       "userId": "1",
       "id": 6
+    },
+    {
+      "title": "sdsdfds",
+      "synopsis": "asdasdasd",
+      "url": "adasdas",
+      "userId": 1,
+      "date": "2019-09-18T19:12:01.906Z",
+      "id": 7
+    },
+    {
+      "title": " final test",
+      "synopsis": " final test",
+      "url": " final test",
+      "userId": 1,
+      "date": "2019-09-18T19:25:37.491Z",
+      "id": 8
     }
   ]
 }
