@@ -11,12 +11,12 @@ import articleClickEvents from "../article/articleClickEvents";
 
 const dashboardActivator = () => {
   // articles
-articlePrinter.printNewArticleButtonToDOM();
-articleClickEvents.articleNewButton();
-articleClickEvents.articleSaveButton();
-articleClickEvents.articleDeleteButton();
-articleClickEvents.articleEditButton();
-articleClickEvents.articleSaveEditButton();
+  articlePrinter.printNewArticleButtonToDOM();
+  articleClickEvents.articleNewButton();
+  articleClickEvents.articleSaveButton();
+  articleClickEvents.articleDeleteButton();
+  articleClickEvents.articleEditButton();
+  articleClickEvents.articleSaveEditButton();
 
   //tasks
   taskClickEvents.taskInput();

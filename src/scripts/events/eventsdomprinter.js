@@ -42,7 +42,6 @@ const jweventsdomprinter = {
           <button id="save-edit-${eventToEdit.id}">Save</button>
         </section>`
 
-// console.log(targetEventCard)
     }
 }
 

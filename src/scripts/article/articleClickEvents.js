@@ -27,8 +27,6 @@ const articleClickEvents = {
         document.querySelector("#news-header").addEventListener("click", function() {
             if (event.target.id === "save-new-article-btn") {
 
-                console.log("Save Btn Success!")
-
                 // Input values of form
                 const userInputTitle = document.querySelector("#new-article-title-box").value;
                 const userInputSynopsis = document.querySelector("#new-article-synopsis-box").value;
@@ -50,7 +48,6 @@ const articleClickEvents = {
             articleAPIManager.postArticle(articleObjectToPost)
             .then(articleAPIManager.getAllArticles)
             .then(parsedArticles => {
-                console.log(document.querySelector("#news-cont"))
                 // Print articles to container
                 document.querySelector("#news-cont").innerHTML = "";
 
@@ -69,7 +66,6 @@ const articleClickEvents = {
 
                 const wordArray = event.target.id.split("-");
                 const idOfThingWeWantToDelete = wordArray[2];
-                console.log(idOfThingWeWantToDelete);
 
             // Make a DELETE request to json-server
         articleAPIManager.deleteOneArticle(idOfThingWeWantToDelete).then(() => {
@@ -110,7 +106,6 @@ const articleClickEvents = {
           // Retrieve the id of the thing we want to edit
           const wordArray = event.target.id.split("-");
           const idOfThingWeWantToEdit = wordArray[2];
-          console.log(idOfThingWeWantToEdit);
 
           // Retrieve the value of the input
           const editedInputValue = document.querySelector(
@@ -125,7 +120,6 @@ const articleClickEvents = {
             userId: localStorage.getItem("userId")
           };
 
-          console.log("Data being sent to DB", editedArticleObj);
           // Send to database w/ PUT method
           articleAPIManager
             .editOneArticle(idOfThingWeWantToEdit, editedArticleObj)

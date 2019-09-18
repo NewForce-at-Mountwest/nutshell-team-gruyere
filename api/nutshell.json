@@ -23,12 +23,6 @@
       "password": "123",
       "email": "123",
       "id": 4
-    },
-    {
-      "username": "hey",
-      "password": "hey",
-      "email": "hey",
-      "id": 5
     }
   ],
   "tasks": [
@@ -62,6 +56,12 @@
       "location": " WILDMAN PARTY CENTRAL",
       "date": " 9/20/19",
       "id": 5
+    },
+    {
+      "name": " final test!!!",
+      "location": "  final test!!!",
+      "date": "  final test!!!",
+      "id": 6
     }
   ],
   "news": [
@@ -118,6 +118,14 @@
       "userId": 1,
       "date": "2019-09-18T19:12:01.906Z",
       "id": 7
+    },
+    {
+      "title": " final test",
+      "synopsis": " final test",
+      "url": " final test",
+      "userId": 1,
+      "date": "2019-09-18T19:25:37.491Z",
+      "id": 8
     }
   ]
 }
