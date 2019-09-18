@@ -6,9 +6,17 @@ import formPrinter from "./printToDom.js";
 import taskClickEvents from "../taskClickEvents.js";
 import jwClickEvents from "../events/eventsclickevents.js";
 import jweventsdomprinter from "../events/eventsdomprinter.js";
+import articlePrinter from "../article/articleDOMPrinter.js";
+import articleClickEvents from "../article/articleClickEvents";
 
 const dashboardActivator = () => {
   // articles
+articlePrinter.printNewArticleButtonToDOM();
+articleClickEvents.articleNewButton();
+articleClickEvents.articleSaveButton();
+articleClickEvents.articleDeleteButton();
+articleClickEvents.articleEditButton();
+articleClickEvents.articleSaveEditButton();
 
   //tasks
   taskClickEvents.taskInput();

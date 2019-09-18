@@ -23,6 +23,12 @@
       "password": "123",
       "email": "123",
       "id": 4
+    },
+    {
+      "username": "hey",
+      "password": "hey",
+      "email": "hey",
+      "id": 5
     }
   ],
   "tasks": [
@@ -60,18 +66,58 @@
   ],
   "news": [
     {
-      "id": 1,
-      "title": "Batboy falls in love",
-      "synopsis": "batboy meets batgirl produces bat babies buys batcave",
-      "url": "www.batboychronicles.com",
-      "userId": 1
+      "title": "This device harnesses the cold night sky to generate electricity in the dark",
+      "synopsis": "A prototype powered a small light-emitting diode in a trial run",
+      "url": "https://www.sciencenews.org/article/device-harnesses-cold-night-sky-generate-electricity-dark",
+      "userId": 1,
+      "date": "2019-09-18T15:25:36.515Z",
+      "id": 1
     },
     {
+      "title": "Giant radio bubbles spew from near the Milky Way’s central black hole",
+      "synopsis": "Newfound structures hint at a violent past for the galaxy’s heart",
+      "url": "https://www.sciencenews.org/article/radio-wave-bubbles-milky-way-black-hole",
+      "userId": 1,
       "id": 2,
-      "title": "Pee Wee goes to the movies",
-      "synopsis": "Come join pee wee at his favorite movie. fun will be had for all",
-      "url": "www.peeweepleasure.com",
-      "userId": 2
+      "date": "2019-09-18T15:26:37.515Z"
+    },
+    {
+      "title": "Ancient Australia was home to 'strange' marsupial giants, scientists find",
+      "synopsis": "Researchers are building a picture of palorchestids, which had tapir-like skulls and large scimitar-like claws",
+      "url": "https://www.theguardian.com/science/2019/sep/14/ancient-australia-was-home-to-strange-marsupial-giants-scientists-find",
+      "userId": 1,
+      "id": 3,
+      "date": "2019-09-18T15:27:38.515Z"
+    },
+    {
+      "title": "TestTime",
+      "synopsis": "TestTimeSyn",
+      "url": "TestURLTime",
+      "userId": 1,
+      "date": "2019-09-18T15:31:24.012Z",
+      "id": 4
+    },
+    {
+      "title": "News",
+      "synopsis": "News",
+      "url": "News",
+      "userId": "1",
+      "id": 5
+    },
+    {
+      "title": "test2",
+      "synopsis": "test2",
+      "url": "test2",
+      "userId": "1",
+      "id": 6
+    },
+    {
+      "title": "sdsdfds",
+      "synopsis": "asdasdasd",
+      "url": "adasdas",
+      "userId": 1,
+      "date": "2019-09-18T19:12:01.906Z",
+      "id": 7
     }
   ]
 }
