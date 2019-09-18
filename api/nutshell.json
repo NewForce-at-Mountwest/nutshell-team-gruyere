@@ -1,5 +1,5 @@
 {
-  "user": [
+  "users": [
     {
       "username": "nutshellman",
       "email": "nutshellman@nutshell.com",
@@ -22,7 +22,7 @@
   ],
   "events": [
     {
-      "name": "happyday",
+      "name": "MONSTERMASH",
       "location": "graveyardsmash",
       "date": "7/7/99",
       "id": 1
@@ -38,6 +38,12 @@
       "location": " right here",
       "date": "9/9/99",
       "id": 4
+    },
+    {
+      "name": " LETS PARTY DUDE",
+      "location": " WILDMAN PARTY CENTRAL",
+      "date": " 9/20/19",
+      "id": 5
     }
   ],
   "news": [

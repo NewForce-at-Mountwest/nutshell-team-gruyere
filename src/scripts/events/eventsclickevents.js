@@ -66,14 +66,15 @@ submitEvent: ()=> {
             date: dateValue
           }
 
-          console.log(editedEventValues)
+          // console.log(editedEventValues)
           // Make a PUT request to db
+ // Refresh the page --> GET all and then reprint all
           jwapiManager.editeventEntry(idFromDatabase, editedEventValues)
             .then(jwapiManager.getallevents)
             .then(allTheEntries => {
               jweventsdomprinter.buildeventcomponent(allTheEntries)
             })
-          // Refresh the page --> GET all and then reprint all
+
         }
       });
     }

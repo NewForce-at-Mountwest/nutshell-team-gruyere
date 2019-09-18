@@ -1,7 +1,8 @@
 import addeventlist from "./eventeventclicker.js"
 import jwapiManager from "./eventsapimanager.js"
-import jwClickEvents from "./eventsclickevents.js"
 
+
+// ADD EVENT BUTTON AND CREATES THE EVENT FORM
 
 const jweventsdomprinter = {
     buildeventcomponent: () => {
@@ -32,11 +33,11 @@ const jweventsdomprinter = {
         const targetEventCard = document.querySelector(`#edit-button-${eventToEdit.id}`)
 
         targetEventCard.innerHTML = `<section>
-          <input id="edit-name-${eventToEdit.id}" type="text" value="${eventToEdit.name}">
+          <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="edit-name-${eventToEdit.id}" type="text" value="${eventToEdit.name}">
           <br>
-          <input id="edit-location-${eventToEdit.id}" type="text" value="${eventToEdit.location}">
+          <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="edit-location-${eventToEdit.id}" type="text" value="${eventToEdit.location}">
           <br>
-          <input id="edit-date-${eventToEdit.id}" type="text" value="${eventToEdit.date}">
+          <input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"  id="edit-date-${eventToEdit.id}" type="text" value="${eventToEdit.date}">
           <br>
           <button id="save-edit-${eventToEdit.id}">Save</button>
         </section>`
@@ -44,7 +45,6 @@ const jweventsdomprinter = {
 // console.log(targetEventCard)
     }
 }
-              jwClickEvents.editEvent()
-              jwClickEvents.submitEvent()
+
 
 export default jweventsdomprinter;
