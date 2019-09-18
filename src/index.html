@@ -10,6 +10,33 @@
     <div>
       <h1>Welcome to Nutshell!</h1>
     </div>
+    <div id="hidden">
+      <section id="login-section">
+        <div id="login-form">
+            <h3>Log In</h3>
+            <form action="">
+              <input type="text" id="login-email-input" placeholder="Email"/>
+              <input type="text" id="login-password-input" placeholder="Password"/>
+            </form>
+            <button id ="login-button">Log In</button>
+            <br>
+            <section is="register-section">
+            <h3>Register</h3>
+            <form action="">
+                <input type="text" id="register-email-input" placeholder="Email"/>
+                <input type="text" id="register-username-input" placeholder="Username"/>
+                <input type="text" id="register-password-input" placeholder="Password"/>
+              </form>
+              <button id ="register-button">Register</button>
+              </section>
+          </div>
+          </section>
+      <br />
+      <section id="article-section"></section>
+      <br />
+      <section id="task-section"></section>
+      <br />
+      <section id="event-section"></section>
 
     <section id="login-section"></section>
     <br />
@@ -20,7 +47,10 @@
     <div id="task-output-container"></div>
     <br />
     <section id="event-section"></section>
+      <section id="logout-section">
+        <!-- <button id="logout-button">Log Out</button> -->
+      </section>
+    </div>
 
-    <script type="module" src="scripts/main.js"></script>
   </body>
 </html>
