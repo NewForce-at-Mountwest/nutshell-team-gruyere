@@ -1,5 +1,5 @@
 {
-  "user": [
+  "users": [
     {
       "username": "nutshellman",
       "email": "nutshellman@nutshell.com",
@@ -68,6 +68,13 @@
       "userId": 1,
       "date": "2019-09-18T15:31:24.012Z",
       "id": 4
+    },
+    {
+      "title": "News",
+      "synopsis": "News",
+      "url": "News",
+      "userId": "1",
+      "id": 5
     }
   ]
 }
