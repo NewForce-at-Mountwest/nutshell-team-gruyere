@@ -2,9 +2,9 @@
 //built by Kelli Evans
 
 const APIManager={
-    getSingleUser: (userValue)=>{
+    getSingleUser: (userKey , userValue)=>{
 
-        return fetch(`http://localhost:8088/users?email=${userValue}`)
+        return fetch(`http://localhost:8088/users?${userKey}=${userValue}`)
         .then(nutshell => nutshell.json())
     },
 
