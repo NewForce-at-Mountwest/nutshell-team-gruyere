@@ -16,7 +16,7 @@ const loginManager = {
         .value;
       // console.log(emailValue, passwordValue)
       // Use the email to go to the database and get that user's information
-      APIManager.getSingleUser(emailValue).then(user => {
+      APIManager.getSingleUser("email" , emailValue).then(user => {
         if (user.length === 1) {
           // User is going to be an array no matter what, so we'll have to delve into the array to get the user's data
           console.log("This is the user", user);
@@ -34,7 +34,7 @@ const loginManager = {
             window.alert("Incorrect password!");
           }
         } else {
-          window.alert("That username does not exist!");
+          window.alert("That email does not exist!");
         }
       });
     });
@@ -50,100 +50,55 @@ const loginManager = {
       const username = document.querySelector("#register-username-input").value;
       const email = document.querySelector("#register-email-input").value;
       const password = document.querySelector("#register-password-input").value;
-
-      console.log("this is the username", username);
+console.log(username, email, password)
+// debugger
+    //   console.log("this is the username", username);
       // let isUnique = false;
 
-      APIManager.getSingleUser("email", email)
         //check to see is the email address already exists in the database
-        .then(singleUser => {
-          if (singleUser.length === 0) {
+      APIManager.getSingleUser("email", email)
+        .then(user => {
+            // debugger
+          if (user.length === 0) {
             // isUnique = true;
 
-            APIManager.getSingleUser("username", username).then(singleUser => {
+            APIManager.getSingleUser("username", username)
+            .then(user => {
               //check to see if the username already exists in the database
-              if (singleUser.length === 0) {
+              if (user.length === 0) {
                 // isUnique = true;
 
                 const userObject = buildUserObject(username, password, email);
 
                 APIManager.addUser(userObject).then(() => {
-                  APIManager.getSingleUser("username", username).then(
-                    singleUser => {
-                      localStorage.setItem("activeUser", singleUser[0]);
-                      console.log("this is userObject", userObject);
-                      formPrinter.removeRegisterForm();
-                      dashboardActivator();
-                    }
-                  );
+                  APIManager.getSingleUser("email", email).then(user => {
+                    localStorage.setItem("activeUser", user[0]);
+                    console.log("this is userObject", userObject);
+                    formPrinter.removeRegisterForm();
+                    dashboardActivator();
+                    formPrinter.printLogoutForm();
+                  });
                 });
               } else {
-                debugger;
                 // isUnique = false;
-                window.alert("That username is already in the database");
+                window.alert("That username already exists!");
               }
             });
           } else {
             // isUnique = false;
-            window.alert("That email is already in the database");
+            window.alert("That email already exists!");
           }
         });
     });
   },
-
-  logOut: () => {
-    null;
-  }
 };
 
-//     //EVENT LISTENER ON THE LOGIN CONTAINER TO HANDLE ALL OF LOGIN AND REGISTRATION FEATURES
-//     document.querySelector("#login-button").addEventListener("click", () => {
-
-//         // const eventTarget = event.target.id.split("-")
-
-//         if (event.target.id === "login-button") {
-//             const email = document.querySelector("#login-email-input").value
-//             const password = document.querySelector("#login-password-input").value
-//             //check if email is in the database
-//             APIManager.getSingleUser(email)
-//                 .then((singleUser) => {
-
-//                     console.log(singleUser)
-//                     // if (singleUser.length === 1) {
-//                     //     //check if password matches
-//                     //     if (singleUser[0].password === password) {
-//                     //         formPrinter.removeLoginForm()
-//                     //         sessionStorage.setItem("activeUser", singleUser[0].id)
-
-//                     //         //this activates the dashboard
-//                     //         dashboardActivator()
-//                     //     }
-//                     //     else {
-//                     //         window.alert("The password is incorrect!")
-
-//                     //     }
-//                     // }
-//                     // else {
-//                     //     window.alert("That email does not exist in the database")
-
-//                     // }
-//                 })
-//         }
-
-//         //If user clicks the register button, load the registration form
-//         if (event.target.id === "reg-btn") {}
-
-//     // EVENT LISTENER FOR THE LOGOUT OPERATION
-//     document.querySelector("#logout-button").addEventListener("click", () => {
-//         if (event.target.id === "logout-button") {
-
-//             sessionStorage.removeItem("activeUser")
-//             //this is just a placeholder until we have the dashboard //
-//             formPrinter.removeLogoutForm()
-//             dashboardDeactivator()
-//             formPrinter.printLoginForm()
-//         }
-//     })
-// }
-
 export default loginManager;
+
+
+// **********************FIX THIS FUCKING LOG OUT FORM*****************************
+// document.querySelector("logout-button").addEventListener("click" , () => {
+//     dashboardDeactivator();
+//     formPrinter.printLoginForm();
+//     formPrinter.printRegisterForm();
+// })

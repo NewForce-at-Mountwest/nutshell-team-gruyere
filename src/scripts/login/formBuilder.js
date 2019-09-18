@@ -28,7 +28,7 @@ const formBuilder = {
     },
 
     makeLogoutForm: () => {
-        return `<div id="logout-form">
+        return `<div id="logout-section">
         <h4>Thank you for visiting Nutshell!</h4>
     <button id="logout-button">Log Out</button>
     </div>`
