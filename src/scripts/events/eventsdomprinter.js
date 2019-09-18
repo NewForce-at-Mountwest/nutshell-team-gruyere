@@ -40,11 +40,11 @@ const jweventsdomprinter = {
           <br>
           <button id="save-edit-${eventToEdit.id}">Save</button>
         </section>`
+
 // console.log(targetEventCard)
     }
 }
               jwClickEvents.editEvent()
               jwClickEvents.submitEvent()
-            //   jwClickEvents.newEventPost()
 
 export default jweventsdomprinter;

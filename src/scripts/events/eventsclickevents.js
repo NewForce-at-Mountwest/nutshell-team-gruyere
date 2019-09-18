@@ -27,7 +27,7 @@ newEventPost: ()=> {
 // Event listener for edit button
 editEvent: ()=>{
 document.querySelector("body").addEventListener("click", () => {
-    if (event.target.id.includes("edit-button")) {
+    if (event.target.id.includes(`edit-button-${event.target.id.split("-")[2]}`)) {
       console.log("you clicked edit")
       console.log(event.target.id.split("-")[2])
       jwapiManager
