@@ -4,6 +4,8 @@
 // Import dashboard sections from articles, tasks and events here
 import formPrinter from "./printToDom.js";
 import taskClickEvents from "../taskClickEvents.js";
+import jwClickEvents from "../events/eventsclickevents.js";
+import jweventsdomprinter from "../events/eventsdomprinter.js";
 
 const dashboardActivator = () => {
   // articles
@@ -14,7 +16,11 @@ const dashboardActivator = () => {
   taskClickEvents.taskDelete();
   taskClickEvents.taskSave();
   taskClickEvents.taskEditSave();
+
   // events
+  jweventsdomprinter.buildeventcomponent();
+  jwClickEvents.editEvent();
+  jwClickEvents.submitEvent();
 
   //logout form
   formPrinter.printLogoutForm();

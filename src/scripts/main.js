@@ -4,17 +4,8 @@ import loginManager from "./login/loginManager.js";
 import taskClickEvents from "./taskClickEvents.js"
 import jwClickEvents from "./events/eventsclickevents.js"
 
-
-jweventsdomprinter.buildeventcomponent()
-// import formPrinter from "../scripts/login/printToDom.js";
-
-jwClickEvents.editEvent()
-jwClickEvents.submitEvent()
-
 // formPrinter.printLoginForm();
 // formPrinter.printRegisterForm();
 loginManager.loggingIN();
 loginManager.register();
-
-
 // loginManager.logOut();
