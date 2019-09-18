@@ -15,21 +15,14 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "taskEntry": "look at news",
-      "date": "9/12/19",
-      "userId": 1
+      "name": "   Many things",
+      "date": "2019-09-16",
+      "id": 5
     },
     {
-      "id": 2,
-      "taskEntry": "lets chat",
-      "date": "9/13/19",
-      "userId": 2
-    },
-    {
-      "date": "2019-09-04",
-      "taskEntry": "    yeah yeah yeah ",
-      "id": 3
+      "date": "2019-09-18",
+      "name": "very nice things",
+      "id": 6
     }
   ],
   "events": [

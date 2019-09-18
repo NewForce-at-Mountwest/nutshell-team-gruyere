@@ -1,5 +1,7 @@
 import tasksApiManager from "./tasksApiManager.js"
 import makeTaskEntryComponent from "./singleFormEntry.js"
+import tasksDomPrinter from "./tasksDomPrinter.js"
+
 
 // input for task section
 document.querySelector("#task-section").innerHTML += makeTaskEntryComponent()
@@ -17,23 +19,54 @@ saveTaskEntryButton.addEventListener("click", function() {
 
 const newTaskEntryObject = {
     date: taskDateValue,
-    taskEntry: taskEntryValue
+    name: taskEntryValue
 };
 tasksApiManager.saveTaskEntry(newTaskEntryObject)
 .then (() => tasksApiManager.getAllTasks())
 
 }})
 
-// Edit button
+// Task edit button
 
 document.querySelector("body").addEventListener("click", () => {
 
-    // Check to see if the user clicked on something with a class of edit-btn
 
-    if(event.target.classlist.contains("edit-btn")){
-        tasksApiManager.editOneTask(event.target.id.split("-")[2])
+    if(event.target.id.includes("edit-each")){
+        tasksApiManager.getOneTaskEntry(event.target.id.split("-")[2])
         .then(singleTaskToEdit => {
-          domPrinter.printEditForm(singleTaskToEdit)
+          tasksDomPrinter.printTaskEditForm(singleTaskToEdit)
         })
       }
     })
+
+    // Task edit save button
+document.querySelector("body").addEventListener("click", () => {
+    if(event.target.id.includes("submit-edit")){
+      const editedTaskObject = {
+        name: document.querySelector(`#edit-input-${event.target.id.split("-")[2]}`).value,
+        date: document.querySelector(`#edit-date-input-${event.target.id.split("-")[2]}`).value
+      }
+      tasksApiManager.editOneTask(editedTaskObject, event.target.id.split("-")[2])
+      .then(tasksApiManager.getAllTasks)
+    }
+  });
+
+// ------- CLICK EVENT FOR TASK DELETE BUTTONS ----------//
+
+    document.querySelector("body").addEventListener("click", () => {
+    // If the user clicks on a delete button, do some stuff
+    if (event.target.id.includes("delete-each")) {
+      // get the unique id of the person you want to delete
+      const taskWordArray = event.target.id.split("-");
+      const idOfThingToDelete = taskWordArray[2];
+      console.log(idOfThingToDelete);
+    // Make a DELETE request to our json-server
+    tasksApiManager.deleteOneTask(idOfThingToDelete).then(() => {
+        // Once the delete is completed, get all the students-- we need to "refresh" the page (kind of)
+      tasksApiManager.getAllTasks()
+      .then(parsedTasks => {
+          // When the students come back, print them to the DOM again
+        tasksDomPrinter.printTasksToDOM(parsedTasks);
+    });
+});
+}})

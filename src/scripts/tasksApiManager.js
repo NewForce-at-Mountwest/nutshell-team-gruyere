@@ -22,6 +22,7 @@ const tasksApiManager = {
             },
         body: JSON.stringify(entryObjectParam)
     }),
+
     editOneTask: (entryObjectParam, id) =>
     fetch(`http://localhost:8088/tasks/${id}`, {
       method: "PUT",
@@ -30,6 +31,12 @@ const tasksApiManager = {
       },
       body: JSON.stringify(entryObjectParam)
     }),
-    }
+
+    deleteOneTask: id =>
+    fetch(`http://localhost:8088/tasks/${id}`, {
+      method: "DELETE"
+    })
+};
+
 
 export default tasksApiManager

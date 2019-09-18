@@ -11,8 +11,7 @@ const makeTaskEntryComponent =  () => {
     <input type="date" name="taskDate" id="task-date">
     </fieldset>
     <fieldset>
-    <textarea name="taskEntry" id="task-input-area" placeholder="Enter task here" cols="15" rows="5">
-    </textarea>
+    <textarea name="taskEntry" id="task-input-area" placeholder="Enter task here" cols="15" rows="5"></textarea>
     </fieldset>
     </form>
     </div>
