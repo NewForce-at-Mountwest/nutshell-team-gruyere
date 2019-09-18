@@ -1,5 +1,5 @@
 {
-  "users": [
+  "user": [
     {
       "username": "nutshellman",
       "email": "nutshellman@nutshell.com",
@@ -21,16 +21,9 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "taskname": "look at news",
-      "date": "9/12/19",
-      "userId": 1
-    },
-    {
-      "id": 2,
-      "taskname": "lets chat",
-      "date": "9/13/19",
-      "userId": 2
+      "date": "2019-09-19",
+      "name": "alkdjflksadjflkasdjf",
+      "id": 1
     }
   ],
   "events": [
