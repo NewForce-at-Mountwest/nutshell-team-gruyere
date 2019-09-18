@@ -30,9 +30,9 @@ const articlePrinter = {
             document.querySelector(
               "#news-cont"
             ).innerHTML += `<div class="article-card" id="article-card-${singleArticle.id}">
-            <p>${singleArticle.title}</p>
-            <p>${singleArticle.synopsis}</p>
-            <p>${singleArticle.url}</p>
+            <p>TITLE: ${singleArticle.title}</p>
+            <p>SYNOPSIS: ${singleArticle.synopsis}</p>
+            <p>URL: ${singleArticle.url}</p>
               <button id ="delete-article-${singleArticle.id}">Delete</button>
               <button id ="edit-article-${singleArticle.id}">Edit</button>
           </div>
@@ -44,11 +44,11 @@ const articlePrinter = {
 
           articleTargetCard.innerHTML = `
           <section class="article-card">
-          <input type="text" id="edit-input-${articleObjectToEdit.id}" type="text" value="${articleObjectToEdit.title}"
+          TITLE: <input type="text" id="edit-input-${articleObjectToEdit.id}" type="text" value="${articleObjectToEdit.title}"
           <br>
-          <input type="text" id="edit-input-${articleObjectToEdit.id}" type="text" value="${articleObjectToEdit.synopsis}"
+          SYNOPSIS: <input type="text" id="edit-input-${articleObjectToEdit.id}" type="text" value="${articleObjectToEdit.synopsis}"
           <br>
-          <input type="text" id="edit-input-${articleObjectToEdit.id}" type="text" value="${articleObjectToEdit.url}"
+          URL: <input type="text" id="edit-input-${articleObjectToEdit.id}" type="text" value="${articleObjectToEdit.url}"
           <br>
             <button id="save-edit-${articleObjectToEdit.id}">Save</button>
           </section>

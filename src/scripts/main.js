@@ -12,46 +12,56 @@ loginManager.loggingIN();
 loginManager.register();
 // loginManager.logOut();
 
-// ~~~ NEWS ARTICLE COMPONENT ~~~ //
+
+
+
+
+// ___ ~~~ NEWS ARTICLE COMPONENT ~~~ ___ //
+// Created by: Melody Miller
 
 articleDOMPrinter.printNewArticleButtonToDOM()
 
-// ARTICLE ------ CLICK EVENT FOR ~NEW ARTICLE~ BUTTON -----//
+// ARTICLE ------ NEW ARTICLE BUTTON -----//
 
-// Add an event listener to the New Article button
+    // Event listener for the New Article button
 
     document.querySelector("#article-section").addEventListener("click", function() {
         if (event.target.id === "new-article-btn") {
 
-            // console.log("Btn Success!")
+            // console.log("New Article Btn Success!")
             articlePrinter.printArticleFormToDOM()
 
     }
   });
-// ARTICLE - SAVE BUTTON
+// ARTICLE ------ SAVE ARTICLE BUTTON ------//
     document.querySelector("#news-header").addEventListener("click", function() {
         if (event.target.id === "save-new-article-btn") {
 
-            console.log("Btn Success!")
+            console.log("Save Btn Success!")
 
-
+            // Input values of form
             const userInputTitle = document.querySelector("#new-article-title-box").value;
             const userInputSynopsis = document.querySelector("#new-article-synopsis-box").value;
             const userInputURL = document.querySelector("#new-article-URL-box").value;
 
+            var currentTime = new Date();
+
+            // POST input values
             const articleObjectToPost = {
 
 
                 title: userInputTitle,
                 synopsis: userInputSynopsis,
                 url:  userInputURL,
-                userId: 1
+                userId: 1,
+                date: currentTime
             };
-
+            // API POST
         articleAPIManager.postArticle(articleObjectToPost)
         .then(articleAPIManager.getAllArticles)
         .then(parsedArticles => {
             console.log(document.querySelector("#news-cont"))
+            // Print articles to container
             document.querySelector("#news-cont").innerHTML = "";
 
             articleDOMPrinter.printSavedArticles(parsedArticles)
@@ -59,11 +69,11 @@ articleDOMPrinter.printNewArticleButtonToDOM()
 
         }
     });
-    // ARTICLE ------- CLICK EVENT FOR DELETE BUTTONS ----------//
+// ARTICLE ------- DELETE BUTTON ----------//
     document.querySelector("#news-cont").addEventListener("click", () => {
         // If the user clicks on a delete button, it deletes
         if (event.target.id.includes("delete-article")) {
-      // get the unique id of the article you to be deleted
+            // get the unique id of the article to be deleted
 
             const wordArray = event.target.id.split("-");
             const idOfThingWeWantToDelete = wordArray[2];
@@ -79,37 +89,37 @@ articleDOMPrinter.printNewArticleButtonToDOM()
     });
         }
     });
-  // ARTICLE ------ EDIT EVENT LISTENERS ------//
+// ARTICLE ------ EDIT BUTTON ------//
     // Event listener for edit button
     document.querySelector("#news-cont").addEventListener("click", () => {
         if (event.target.id.includes("edit-article")) {
-            // console.log("Btn Success!")
-            // Get the id of the thing we want to edit from the button's id attribute
+            // console.log("Edit Btn Success!")
+            // Get the id of the thing to edit from the button's id attribute
             const wordArray = event.target.id.split("-");
             const idOfThingWeWantToEdit = wordArray[2];
 
-      // Pass that id into articleAPIManager to bring back the article we want to edit
+      // Pass id into articleAPIManager to bring back the article to edit
     articleAPIManager.getOneArticle(idOfThingWeWantToEdit).then(singleArticle => {
         articleDOMPrinter.printArticleEditForm(singleArticle);
     });
         }
     });
-// Event listener for submit button
+// ARTICLE ------ SUBMIT BUTTON ------ //
 
     document.querySelector("body").addEventListener("click", () => {
         if (event.target.id.includes("save-edit")) {
             console.log("Btn Success!")
-      // Get the id of the thing we want to edit
+      // Retrieve the id of the thing we want to edit
       const wordArray = event.target.id.split("-");
       const idOfThingWeWantToEdit = wordArray[2];
       console.log(idOfThingWeWantToEdit);
 
-      // Get the value of the input
+      // Retrieve the value of the input
       const editedInputValue = document.querySelector(
         `#edit-input-${idOfThingWeWantToEdit}`
       ).value;
 
-      // Put the input value into an object
+      // Insert the input value into an object
       const editedArticleObj = {
         title: editedInputValue,
         synopsis: editedInputValue,
@@ -127,7 +137,5 @@ articleDOMPrinter.printNewArticleButtonToDOM()
           });
         });
 
-      // Once the PUT is complete, GET all the articles from the db
-      // Once they articles come back from the db, print them to the DOM
     }
   });
