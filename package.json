@@ -2,7 +2,7 @@
   "name": "nutshell-team-gruyere",
   "version": "1.0.0",
   "description": "Nutshell App",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "webpack-dev-server --mode development"
   },
