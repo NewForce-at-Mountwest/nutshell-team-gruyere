@@ -76,7 +76,7 @@ console.log(username, email, password)
                     console.log("this is userObject", userObject);
                     formPrinter.removeRegisterForm();
                     dashboardActivator();
-                    formPrinter.printLogoutForm();
+                    // formPrinter.printLogoutForm();
                   });
                 });
               } else {

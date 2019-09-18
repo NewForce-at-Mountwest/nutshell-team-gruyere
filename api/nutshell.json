@@ -29,6 +29,12 @@
       "password": "dyer",
       "email": "savannah",
       "id": 5
+    },
+    {
+      "username": "test",
+      "password": "test",
+      "email": "test",
+      "id": 6
     }
   ],
   "tasks": [
