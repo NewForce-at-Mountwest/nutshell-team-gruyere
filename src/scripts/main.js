@@ -12,9 +12,11 @@ loginManager.loggingIN();
 loginManager.register();
 loginManager.logOut();
 
+// ~~~ NEWS ARTICLE COMPONENT ~~~ //
+
 articleDOMPrinter.printNewArticleButtonToDOM()
 
-// ------ CLICK EVENT FOR NEW ARTICLE BUTTON -----//
+// ARTICLE ------ CLICK EVENT FOR ~NEW ARTICLE~ BUTTON -----//
 
 // Add an event listener to the New Article button
 
@@ -26,7 +28,7 @@ articleDOMPrinter.printNewArticleButtonToDOM()
 
     }
   });
-
+// ARTICLE - SAVE BUTTON
     document.querySelector("#news-header").addEventListener("click", function() {
         if (event.target.id === "save-new-article-btn") {
 
@@ -44,7 +46,7 @@ articleDOMPrinter.printNewArticleButtonToDOM()
                 synopsis: userInputSynopsis,
                 url:  userInputURL,
                 userId: 1
-        };
+            };
 
         articleAPIManager.postArticle(articleObjectToPost)
         .then(articleAPIManager.getAllArticles)
@@ -55,44 +57,77 @@ articleDOMPrinter.printNewArticleButtonToDOM()
             articleDOMPrinter.printSavedArticles(parsedArticles)
         })
 
-    }
+        }
+    });
+    // ARTICLE ------- CLICK EVENT FOR DELETE BUTTONS ----------//
+    document.querySelector("#news-cont").addEventListener("click", () => {
+        // If the user clicks on a delete button, it deletes
+        if (event.target.id.includes("delete-article")) {
+      // get the unique id of the article you to be deleted
 
-    // ------- CLICK EVENT FOR DELETE BUTTONS ----------//
-// Add an event listener to the body element because the delete buttons are loaded dynamically-- they don't exist on page load!
-document.querySelector("#news-cont").addEventListener("click", () => {
-    // If the user clicks on a delete button, do some stuff
-    if (event.target.id.includes("delete-article")) {
-      // get the unique id of the person you want to delete
-      // remember that we gave our delete buttons id attributes of delete-student-uniqueId
-      const wordArray = event.target.id.split("-");
-      const idOfThingWeWantToDelete = wordArray[2];
-      console.log(idOfThingWeWantToDelete);
+            const wordArray = event.target.id.split("-");
+            const idOfThingWeWantToDelete = wordArray[2];
+            console.log(idOfThingWeWantToDelete);
 
-      // Make a DELETE request to our json-server
-      articleAPIManager.deleteOneArticle(idOfThingWeWantToDelete).then(() => {
-        // Once the delete is completed, get all the students-- we need to "refresh" the page (kind of)
+        // Make a DELETE request to json-server
+    articleAPIManager.deleteOneArticle(idOfThingWeWantToDelete).then(() => {
+            // Once the delete is completed, get all the articles
         articleAPIManager.getAllArticles().then(parsedArticles => {
-          // When the students come back, print them to the DOM again
-          articleDOMPrinter.printSavedArticles(parsedArticles);
+                // Articles return, print them to the DOM again
+            articleDOMPrinter.printSavedArticles(parsedArticles);
         });
-      });
-    }
-  });
-  // ------ EDIT EVENT LISTENERS ------//
-// Event listener for edit button
-document.querySelector("#news-cont").addEventListener("click", () => {
-    if (event.target.id.includes("edit-article")) {
-      // Get the id of the thing we want to edit from the button's id attribute
+    });
+        }
+    });
+  // ARTICLE ------ EDIT EVENT LISTENERS ------//
+    // Event listener for edit button
+    document.querySelector("#news-cont").addEventListener("click", () => {
+        if (event.target.id.includes("edit-article")) {
+            // console.log("Btn Success!")
+            // Get the id of the thing we want to edit from the button's id attribute
+            const wordArray = event.target.id.split("-");
+            const idOfThingWeWantToEdit = wordArray[2];
+
+      // Pass that id into articleAPIManager to bring back the article we want to edit
+    articleAPIManager.getOneArticle(idOfThingWeWantToEdit).then(singleArticle => {
+        articleDOMPrinter.printArticleEditForm(singleArticle);
+    });
+        }
+    });
+// Event listener for submit button
+
+    document.querySelector("body").addEventListener("click", () => {
+        if (event.target.id.includes("save-edit")) {
+            console.log("Btn Success!")
+      // Get the id of the thing we want to edit
       const wordArray = event.target.id.split("-");
       const idOfThingWeWantToEdit = wordArray[2];
+      console.log(idOfThingWeWantToEdit);
 
-      // Pass that id into our apiManager to bring back the student we want to edit
-      articleAPIManager.getOneArticle(idOfThingWeWantToEdit).then(singleArticle => {
-        articleDOMPrinter.printArticleEditForm(singleArticle);
-      });
+      // Get the value of the input
+      const editedInputValue = document.querySelector(
+        `#edit-input-${idOfThingWeWantToEdit}`
+      ).value;
+
+      // Put the input value into an object
+      const editedArticleObj = {
+        title: editedInputValue,
+        synopsis: editedInputValue,
+        url: editedInputValue,
+        userId: localStorage.getItem("userId")
+      };
+
+      console.log("Data being sent to DB", editedArticleObj);
+      // Send to database w/ PUT method
+      articleAPIManager
+        .editOneArticle(idOfThingWeWantToEdit, editedArticleObj)
+        .then(() => {
+          articleAPIManager.getAllArticles().then(allArticles => {
+            articleDOMPrinter.printSavedArticles(allArticles);
+          });
+        });
+
+      // Once the PUT is complete, GET all the articles from the db
+      // Once they articles come back from the db, print them to the DOM
     }
   });
-
-    });
-
-

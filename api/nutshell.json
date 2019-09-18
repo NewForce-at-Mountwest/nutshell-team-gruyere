@@ -85,24 +85,24 @@
       "id": 4
     },
     {
-      "title": "news",
-      "synopsis": "news",
-      "url": "news",
-      "userId": 1,
+      "title": "more news",
+      "synopsis": "more news",
+      "url": "more news",
+      "userId": "4",
       "id": 5
     },
     {
-      "title": "newstest",
-      "synopsis": "newstest",
-      "url": "newstest",
-      "userId": 1,
+      "title": "Newsedit",
+      "synopsis": "Newsedit",
+      "url": "Newsedit",
+      "userId": "4",
       "id": 6
     },
     {
-      "title": "test",
-      "synopsis": "test",
-      "url": "test",
-      "userId": 1,
+      "title": "News",
+      "synopsis": "News",
+      "url": "News",
+      "userId": "4",
       "id": 7
     }
   ]

@@ -43,7 +43,7 @@ const articlePrinter = {
           const articleTargetCard = document.querySelector(`#article-card-${articleObjectToEdit.id}`)
 
           articleTargetCard.innerHTML = `
-          <section>
+          <section class="article-card">
           <input type="text" id="edit-input-${articleObjectToEdit.id}" type="text" value="${articleObjectToEdit.title}"
           <br>
           <input type="text" id="edit-input-${articleObjectToEdit.id}" type="text" value="${articleObjectToEdit.synopsis}"
