@@ -74,7 +74,7 @@ taskDelete: () => {
             console.log(idOfThingToDelete);
             // Make a DELETE request to our json-server
             tasksApiManager.deleteOneTask(idOfThingToDelete).then(() => {
-                debugger
+
                 // Once the delete is completed, get all the tasks--
                 tasksApiManager.getAllTasks()
             });

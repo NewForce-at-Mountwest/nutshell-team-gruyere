@@ -7,10 +7,6 @@ import taskClickEvents from "./taskClickEvents.js"
 // formPrinter.printRegisterForm();
 loginManager.loggingIN();
 loginManager.register();
-taskClickEvents.taskInput();
-taskClickEvents.taskEdit();
-taskClickEvents.taskDelete();
-taskClickEvents.taskSave();
-taskClickEvents.taskEditSave();
-// loginManager.logOut();
 
+
+// loginManager.logOut();
