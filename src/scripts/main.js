@@ -6,11 +6,11 @@ import loginManager from "./login/loginManager.js";
 
 
 
-// // formPrinter.printLoginForm();
-// // formPrinter.printRegisterForm();
+// formPrinter.printLoginForm();
+// formPrinter.printRegisterForm();
 loginManager.loggingIN();
 loginManager.register();
-loginManager.logOut();
+// loginManager.logOut();
 
 // ~~~ NEWS ARTICLE COMPONENT ~~~ //
 

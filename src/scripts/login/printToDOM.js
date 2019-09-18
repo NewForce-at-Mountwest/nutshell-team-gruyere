@@ -22,7 +22,7 @@ const formPrinter = {
     },
 
     printLogoutForm:()=>{
-        document.querySelector("#logout-section").innerHTML=formBuilder.makeLogoutForm()
+        document.querySelector("#logout-section").innerHTML += formBuilder.makeLogoutForm()
     },
 
     removeLogoutForm:()=>{
