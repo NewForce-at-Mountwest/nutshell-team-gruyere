@@ -17,6 +17,24 @@
       "password": "evans",
       "email": "kelli",
       "id": 3
+    },
+    {
+      "username": "alan",
+      "password": "evans",
+      "email": "christopher",
+      "id": 4
+    },
+    {
+      "username": "rose",
+      "password": "dyer",
+      "email": "savannah",
+      "id": 5
+    },
+    {
+      "username": "test",
+      "password": "test",
+      "email": "test",
+      "id": 6
     }
   ],
   "tasks": [

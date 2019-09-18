@@ -8,8 +8,8 @@ const formBuilder = {
         <form action="">
           <input type="text" id="login-email-input" placeholder="Email"/>
           <input type="text" id="login-password-input" placeholder="Password"/>
-          <button id ="login-button">Log In</button>
         </form>
+        <button id ="login-button">Log In</button>
       </div>`;
 
     },
@@ -21,14 +21,14 @@ const formBuilder = {
           <input type="text" id="register-username-input" placeholder="Username"/>
           <input type="text" id="register-email-input" placeholder="Email" />
           <input type="text" id="register-password-input" placeholder="Password"/>
-          <button id="register-button">Register</button>
         </form>
+        <button id="register-button">Register</button>
       </div>`;
 
     },
 
     makeLogoutForm: () => {
-        return `<div id="logout-form">
+        return `<div id="logout-section">
         <h4>Thank you for visiting Nutshell!</h4>
     <button id="logout-button">Log Out</button>
     </div>`

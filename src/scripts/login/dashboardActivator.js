@@ -8,12 +8,12 @@ import formPrinter from "./printToDom.js"
 
 
 const dashboardActivator = () => {
-    formPrinter.printLogoutForm()
+    formPrinter.printLogoutForm();
     // articles
     // events
     // tasks
 
-    document.querySelector("#hidden").id="visible";
+    // document.querySelector("#hidden").id="visible";
 }
 
 export default dashboardActivator;

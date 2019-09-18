@@ -7,9 +7,9 @@ jweventsdomprinter.buildeventcomponent()
 
 
 
-// // formPrinter.printLoginForm();
-// // formPrinter.printRegisterForm();
+// formPrinter.printLoginForm();
+// formPrinter.printRegisterForm();
 loginManager.loggingIN();
 loginManager.register();
-loginManager.logOut();
+// loginManager.logOut();
 
