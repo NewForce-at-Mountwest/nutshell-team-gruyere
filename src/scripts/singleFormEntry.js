@@ -1,9 +1,9 @@
 import tasksDomPrinter from "./tasksDomPrinter.js"
 
 const makeTaskEntryComponent =  () => {
-    return `<section>
+    return `<section class="task-section">
     <div id= "task-input-form">
-    <h3> Tasks </h3>
+    <h2> Tasks </h2>
     <form>
     <fieldset>
     <label for="taskDate">Date of task</label>
