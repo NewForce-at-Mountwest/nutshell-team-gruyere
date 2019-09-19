@@ -52,6 +52,11 @@
       "date": "2019-09-18",
       "name": "I be poopin. ",
       "id": 5
+    },
+    {
+      "date": "2019-09-19",
+      "name": "nutshell",
+      "id": 6
     }
   ],
   "events": [
@@ -128,6 +133,14 @@
       "userId": 1,
       "date": "2019-09-18T19:25:37.491Z",
       "id": 8
+    },
+    {
+      "title": "nutshell",
+      "synopsis": "nutshell",
+      "url": "nutshell",
+      "userId": 1,
+      "date": "2019-09-19T14:19:55.810Z",
+      "id": 10
     }
   ]
 }

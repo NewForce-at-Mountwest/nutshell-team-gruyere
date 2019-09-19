@@ -5,4 +5,22 @@ body {
     background-size: cover;
     background-attachment: scroll;
     background-color: maroon;
+    color: white;
+}
+
+.welcome-header {
+text-align: center;
+font-size: 15vh;
+}
+
+#article-section {
+    border: 2px solid white;
+}
+
+#task-section {
+    border: 2px solid white;
+}
+
+#task-output-container {
+    border: 2px solid white;
 }

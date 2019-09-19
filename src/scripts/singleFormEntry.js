@@ -1,7 +1,7 @@
 import tasksDomPrinter from "./tasksDomPrinter.js"
 
 const makeTaskEntryComponent =  () => {
-    return `<section>
+    return `<section class="task-section">
     <div id= "task-input-form">
     <h2> Tasks </h2>
     <form>
